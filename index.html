@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="text" id="room">
+<button id="newRoom">Join</button>
+</body>
+<script>
+    $("#newRoom").click(function(){
+        var room = document.getElementById("room");  
+        window.localStorage.room = room.value;      
+        window.location.href = "video.html?="+room.value;
+    });
+</script>
+</html>
